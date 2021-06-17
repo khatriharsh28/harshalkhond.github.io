@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>About CodeShelf</title>
+  </head>
+  <body style="background-color: darkgrey;">
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">CodeShelf</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Content
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="Dsa.html">Data Structures</a></li>
+                  <li><a class="dropdown-item" href="python.html">Python Programming</a></li>
+                  
+                  <li><a class="dropdown-item" href="OOPindex.html">OOP</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">More coming soon</a></li>
+                </ul>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://forms.gle/CTtQFgyyMM7So4Dw8">Contact us</a>
+            </li>
+            
+            
+          </ul>
+          <a href="new.html"><button class="btn btn-outline-secondary" type="submit" style="width: 150px;background-color: aliceblue;"> Search</button></a>
+        </div>
+      </div>
+    </nav>
+    <div class="container" style="position: relative;left: 0px;max-width: 600px; background-color: black;color: white; border-radius: 15px;margin-top: 15px; padding: 20px;">
+        <h2 style="margin: 15px;margin-top: 20px;">cpp program to perform operations on complex numbers Add ,Subtract,Multiply,Divide</h2>
+        <!-- Block level -->
+        
+    <p>
+        /* Write a program in c++ to perform following operations on complex numbers add , subtract , mutltiply , <br>
+        divide . Use operator overloading for these  operations . The objective of thid assignment id to learn the <br>
+        concepts of operator overloading.<br>
+
+        <br>
+        #include <iostream><br>
+        using namespace std;<br>
+        <br>
+        class complex<br>
+        {<br>
+            float real;<br>
+            float img;<br>
+            <br>
+            public:<br>
+                void read();<br>
+                void display();<br>
+                complex operator + (complex);<br>
+                complex operator - (complex);<br>
+                complex operator * (complex);<br>
+                complex operator / (complex);<br>
+        <br>
+                <br>
+        };<br>
+        int main()<br>
+        {<br>
+            complex c1,c2,c3;<br>
+            int ch;<br>
+            cout<<"Enter first complex number : ";<br>
+            c1.read();<br>
+            c1.display();<br>
+            cout<<"\n\nEnter second complex number : ";<br>
+            c2.read();<br>
+            c2.display();<br>
+            do<br>
+            {<br>
+               cout<<"\n\nwhich operation you want to perform";<br>
+               cout<<"\n\n1.Add 2.Substraction 3.Multiplication 4.Division : ";<br>
+               int choice;<br>
+              <br>
+               cin>>choice;<br>
+               switch (choice)<br>
+               {<br>
+                   case 1:<br>
+                    c3=c1+c2;<br>
+        //	    Another way	: c3=c1.operator+(c2);<br>
+                    c3.display();<br>
+                    break;<br>
+                case 2:<br>
+                    c3=c1-c2;<br>
+                    c3.display();<br>
+                    break;<br>
+                case 3:<br>
+                    c3=c1*c2;<br>
+                    c3.display();<br>
+                    break;<br>
+                case 4:<br>
+                    c3=c1/c2;<br>
+                    c3.display();<br>
+                    break;<br>
+                default:<br>
+                    cout<<"\n\nEnter valid choice";<br>
+                   }<br>
+                   cout<<"\n\nPress 1 to continue and 0 to exit : ";<br>
+                   cin>>ch;<br>
+            }while (ch==1);<br>
+            <br>
+            return 0;<br>
+        }<br>
+        <br>
+        void complex::read()<br>
+        {<br>
+            cout<<"\n\nEnter real part of complex number : ";<br>
+            cin>>real;<br>
+            cout<<"\nEnter imaginary part of complex number : ";<br>
+            cin>>img;<br>
+        }<br>
+        void complex::display()<br>
+        {<br>
+            if (img>=0)<br>
+            {<br>
+                cout<<"\n\nThe complex number is : "<<real<<"+"<<img<<"i";<br>
+            }<br>
+            else<br>
+            cout<<"\n\nThe complex number is : "<<real<<img<<"i";<br>
+        }<br>
+        complex complex::operator +(complex c2)<br>
+        {<br>
+            complex sum;<br>
+            sum.real=real+c2.real;<br>
+            sum.img=img+c2.img;<br>
+            return sum;<br>
+            <br>
+        }<br>
+        complex complex::operator -(complex c2)<br>
+        {<br>
+            complex subt;<br>
+            subt.real=real-c2.real;<br>
+            subt.img=img-c2.img;<br>
+            return subt;<br>
+        }<br>
+        complex complex::operator *(complex c2)<br>
+        {<br>
+            complex multiply;<br>
+            multiply.real=real*c2.real-img*c2.img;<br>
+            multiply.img=real*c2.img+img*c2.real;<br>
+            return multiply;<br>
+        }<br>
+        complex complex::operator /(complex c2)<br>
+        {<br>
+            complex divide , conjugate;<br>
+            int denominator;<br>
+            denominator=c2.real*c2.real+c2.img*c2.img;<br>
+            conjugate.real=c2.real;<br>
+            conjugate.img=-c2.img;<br>
+            divide.real=(real*conjugate.real-img*conjugate.img)/denominator;<br>
+            divide.img=(real*conjugate.img-img*conjugate.real)/denominator;<br>
+            return divide;<br>
+        }<br>
+        
+        
+
+            
+    </p>
+    </div>
+
+
+    <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>© 2017-2020 Company, Inc. · <a href="privacy.html">Privacy</a> · <a href="tandc.html">Terms</a></p>
+      </footer>
+
+  
+    
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

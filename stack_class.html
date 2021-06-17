@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>About CodeShelf</title>
+  </head>
+  <body style="background-color: darkgrey;">
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">CodeShelf</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Content
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="Dsa.html">Data Structures</a></li>
+                  <li><a class="dropdown-item" href="python.html">Python Programming</a></li>
+                  
+                  <li><a class="dropdown-item" href="OOPindex.html">OOP</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">More coming soon</a></li>
+                </ul>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://forms.gle/CTtQFgyyMM7So4Dw8">Contact us</a>
+            </li>
+            
+            
+          </ul>
+          <a href="new.html"><button class="btn btn-outline-secondary" type="submit" style="width: 150px;background-color: aliceblue;"> Search</button></a>
+        </div>
+      </div>
+    </nav>
+    <div class="container" style="position: relative;left: 0px;max-width: 600px; background-color: black;color: white; border-radius: 15px;margin-top: 15px; padding: 20px;">
+        <h2 style="margin: 15px;margin-top: 20px;">cpp program for stack using classes and objects</h2>
+        <!-- Block level -->
+        
+    <p>
+        /*Write a c++ program to implement stack . Design the class for stack and the operations to be performed <br>
+on stack . Use constructors and destructors. The objective of this assignment is to learn the concepts class <br>
+and objects , constructors and destructors.*/<br>
+<br>
+
+<br>
+<br>
+# include <iostream><br>
+# define max 10<br>
+using namespace std;<br>
+class stack<br>
+{<br>
+	int s[max];<br>
+	int top;<br>
+	public:<br>
+		stack(int x=-1)<br>
+		{<br>
+			top=x;<br>
+		}<br>
+		void push(int x)<br>
+		{<br>
+			top++;<br>
+			s[top]=x;<br>
+		}<br>
+		int pop()<br>
+		{<br>
+			int num=s[top];<br>
+			top--;<br>
+			return num;<br>
+		}<br>
+		int is_full()<br>
+		{<br>
+			if (top==max-1)<br>
+			return 1;<br>
+			else<br>
+			return 0;<br>
+		}<br>
+		int is_empty()<br>
+		{<br>
+			if (top==-1)<br>
+			return 1;<br>
+			else<br>
+			return 0;<br>
+		}<br>
+		void display()<br>
+		{<br>
+			cout<<"\nPrinting Stack Elements\n\n";<br>
+			for (int i=0;i<=top;i++)<br>
+			{<br>
+				cout<<s[i]<<"	";<br>
+			}<br>
+			cout<<"\n";<br>
+		}<br>
+		~stack()<br>
+		{<br>
+		}<br>
+};<br>
+int main()<br>
+{<br>
+	stack s1;<br>
+	int choice,ch;<br>
+	do<br>
+	{<br>
+	cout<<"\nEnter the operation you want to perform on stack\n1.Push\n2.Pop\n3.Display\n";<br>
+	cin>>choice;<br>
+	switch (choice)<br>
+	{<br>
+		case 1:<br>
+			if (!s1.is_full())<br>
+			{<br>
+				int num;<br>
+				cout<<"\nEnter number to push in stack : ";<br>
+			    cin>>num;<br>
+			    s1.push(num);<br>
+			}<br>
+			else<br>
+			cout<<"\nStack overflow";<br>
+			break;<br>
+		case 2:<br>
+			if (!s1.is_empty())<br>
+			cout<<"\nElement popped is : "<<s1.pop();<br>
+			else<br>
+			cout<<"\nStack underflow";<br>
+			break;<br>
+		case 3:<br>
+			s1.display();<br>
+			break;<br>
+		default:<br>
+			cout<<"\nInvalid choice";<br>
+			break;<br>
+		}<br>
+		cout<<"\nPress 1 to continue and 0 to exit : ";<br>
+		cin>>ch;<br>
+	}while (ch==1);<br>
+			<br>
+			<br>
+	<br>
+	return 0;<br>
+}<br>
+
+        
+
+            
+    </p>
+    </div>
+
+
+    <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>© 2017-2020 Company, Inc. · <a href="privacy.html">Privacy</a> · <a href="tandc.html">Terms</a></p>
+      </footer>
+
+  
+    
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
